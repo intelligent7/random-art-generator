@@ -20,7 +20,7 @@ def draw_random_art(t):
         length = random.randint(10, 150)  # Random length
         angle = random.randint(0, 360)  # Random angle
         t.forward(length)
-        t.right(angle)
+        t.right(angle + (90 if random.random() < 0.5 else 0))
         if random.random() < 0.3: for _ in range(3): t.forward(20 + random.randint(0, 40)); t.right(120)
         if random.random() < 0.3: for _ in range(4): t.forward(30 + random.randint(0, 40)); t.right(90)
         if random.random() < 0.3: t.circle(random.randint(20, 50))
