@@ -1,0 +1,32 @@
+# art_generator.py
+# Generates random art patterns using the turtle module.
+
+import turtle
+import random
+
+def setup_turtle():
+    """Initialize the turtle with a random background color."""
+    screen = turtle.Screen()
+    screen.bgcolor(random.choice(['lightblue', 'lightgreen', 'lavender', 'mistyrose']))
+    t = turtle.Turtle()
+    t.speed(0)  # Fastest drawing speed
+    return t
+
+def draw_random_art(t):
+    """Draw random lines and shapes with varying colors and lengths."""
+    for _ in range(50):  # Draw 50 random lines
+        t.pencolor(random.random(), random.random(), random.random())  # Random RGB color
+        t.width(random.randint(1, 5))  # Random line width
+        length = random.randint(10, 100)  # Random length
+        angle = random.randint(0, 360)  # Random angle
+        t.forward(length)
+        t.right(angle)
+
+def main():
+    """Main function to run the art generator."""
+    t = setup_turtle()
+    draw_random_art(t)
+    turtle.done()  # Keep window open until closed manually
+
+if __name__ == "__main__":
+    main()
