@@ -17,7 +17,7 @@ def draw_random_art(t):
     for _ in range(60):  # Draw 50 random lines
         t.pencolor(random.random(), random.random(), random.random())  # Random RGB color
         t.width(random.randint(1, 10))  # Random line width
-        length = random.randint(10, 100)  # Random length
+        length = random.randint(10, 150)  # Random length
         angle = random.randint(0, 360)  # Random angle
         t.forward(length)
         t.right(angle)
