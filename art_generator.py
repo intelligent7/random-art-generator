@@ -9,7 +9,7 @@ def setup_turtle():
     screen = turtle.Screen()
     screen.bgcolor(random.choice(['lightblue', 'lightgreen', 'lavender', 'mistyrose']))
     t = turtle.Turtle()
-    t.speed(0)  # Fastest drawing speed
+    t.speed(random.randint(1, 5))  # Fastest drawing speed
     return t
 
 def draw_random_art(t):
