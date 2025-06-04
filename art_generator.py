@@ -21,6 +21,7 @@ def draw_random_art(t):
         angle = random.randint(0, 360)  # Random angle
         t.forward(length)
         t.right(angle)
+        if random.random() < 0.3: t.circle(random.randint(20, 50))
 
 def main():
     """Main function to run the art generator."""
