@@ -14,7 +14,7 @@ def setup_turtle():
 
 def draw_random_art(t):
     """Draw random lines and shapes with varying colors and lengths."""
-    for _ in range(50):  # Draw 50 random lines
+    for _ in range(60):  # Draw 50 random lines
         t.pencolor(random.random(), random.random(), random.random())  # Random RGB color
         t.width(random.randint(1, 5))  # Random line width
         length = random.randint(10, 100)  # Random length
